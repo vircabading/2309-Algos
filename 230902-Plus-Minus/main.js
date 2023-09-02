@@ -8,6 +8,21 @@ const getNumPosNegZero = (numArray) => {
     let numPos = 0;
     let numNeg = 0;
     let numZero = 0;
+    let totalNum = numArray.length;
+
+    for (let x=0; x<numArray.length; x++) {
+        let curNum = numArray[x];
+        // console.log(`${x}: ${curNum}`);
+        if (curNum > 0) {
+            numPos++;
+        } else if (curNum < 0) {
+            numNeg++;
+        } else {
+            numZero++;
+        }
+        console.log(`Current Number: ${curNum} | Number of Positives: ${numPos} | Negatives: ${numNeg} | Zeroes: ${numZero}`);
+    }
+    console.log(`total number of numbers: ${totalNum}`);
 }
 
 console.log("//////////////////////////////");
