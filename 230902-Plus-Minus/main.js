@@ -23,6 +23,12 @@ const getNumPosNegZero = (numArray) => {
         console.log(`Current Number: ${curNum} | Number of Positives: ${numPos} | Negatives: ${numNeg} | Zeroes: ${numZero}`);
     }
     console.log(`total number of numbers: ${totalNum}`);
+    const posRatio = numPos / totalNum;
+    const negRatio = numNeg / totalNum;
+    const zeroRatio = numZero / totalNum;
+    console.log(posRatio);
+    console.log(negRatio);
+    console.log(zeroRatio);
 }
 
 console.log("//////////////////////////////");
