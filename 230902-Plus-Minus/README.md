@@ -11,3 +11,17 @@ JavaScript
 ## Origin
 
 HackerRank
+
+## Example
+
+> arr = [1, 1, 0, -1 -1]
+
+There are **_n_** = 5 elements, two positive, two negatice, and one zero.
+
+Results are printed as:
+
+```
+0.400000
+0.400000
+0.200000
+```
