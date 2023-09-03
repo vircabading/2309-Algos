@@ -2,8 +2,8 @@
 // Main Application
 
 const getNumPosNegZero = (numArray) => {
-    console.log("\n*** open getNumPosNegZero() ******\n");
-    console.log({numArray});
+    // console.log("\n*** open getNumPosNegZero() ******\n");
+    // console.log({numArray});
 
     let numPos = 0;
     let numNeg = 0;
@@ -20,15 +20,15 @@ const getNumPosNegZero = (numArray) => {
         } else {
             numZero++;
         }
-        console.log(`Current Number: ${curNum} | Number of Positives: ${numPos} | Negatives: ${numNeg} | Zeroes: ${numZero}`);
+        // console.log(`Current Number: ${curNum} | Number of Positives: ${numPos} | Negatives: ${numNeg} | Zeroes: ${numZero}`);
     }
-    console.log(`total number of numbers: ${totalNum}`);
+    // console.log(`total number of numbers: ${totalNum}`);
     const posRatio = numPos / totalNum;
     const negRatio = numNeg / totalNum;
     const zeroRatio = numZero / totalNum;
-    console.log(posRatio);
-    console.log(negRatio);
-    console.log(zeroRatio);
+    console.log(posRatio.toFixed(6));
+    console.log(negRatio.toFixed(6));
+    console.log(zeroRatio.toFixed(6));
 }
 
 console.log("//////////////////////////////");
