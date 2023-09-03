@@ -3,8 +3,6 @@
 /////////////////////////////////////////
 
 const miniMaxSum = (arr) => {
-    console.log({arr});
-
     // Initializa Variables
     let totalSum = 0;
     let smallestInt = arr[0];
@@ -12,17 +10,21 @@ const miniMaxSum = (arr) => {
 
     // Iterate through array
     // Find the smalles and largest number along with the sum of all the numbers
-    for (numb of arr) {
+    for (let numb of arr) {
         if (numb < smallestInt) {
             smallestInt = numb;
         } else if (numb > largestInt) {
             largestInt = numb;
         }
         totalSum += numb;
-
-        console.log({numb});
-        console.log(`total sum: ${totalSum} | smallest int: ${smallestInt} | largest int: ${largestInt}`);
     }
+
+    // Calculate minimum and maximum sums
+    const minSum = totalSum - largestInt;
+    const maxSum = totalSum - smallestInt;
+
+    // Output findings
+    console.log(`${minSum} ${maxSum}`)
 }
 
 console.log("/////////////////////////////////");
