@@ -2,31 +2,27 @@
 //  TIME CONVERSION ALGORITHM
 /////////////////////////////////////////////////
 
-const convertHour = (hour,middayStat) => {
-    if ((middayStat == "AM") && (hour == "12")) {
-        return "00";
-    } else if ((middayStat == "PM") && (hour != "12")) {
-        let numHour = parseInt(hour);
-        numHour += 12;
-        if (numHour >= 10) {
-            return numHour.toString();
-        } else {
-            return "0" + numHour.toString();
-        }
-    }
-    return hour;
-}
+
 
 const timeConversion = (s) => {
-    console.log({s});
-
-    // Parse the parts of the time
+    const convertHour = (hour,middayStat) => {
+        if ((middayStat == "AM") && (hour == "12")) {
+            return "00";
+        } else if ((middayStat == "PM") && (hour != "12")) {
+            let numHour = parseInt(hour);
+            numHour += 12;
+            if (numHour >= 10) {
+                return numHour.toString();
+            } else {
+                return "0" + numHour.toString();
+            }
+        }
+        return hour;
+    }
+    
     const middayStat = s.substring(8,10);       // Find out if time is AM or PM?
     const hour = s.substring(0,2);
     const minuteAndSeconds = s.substring(2,8);
-    console.log({middayStat});
-    console.log({hour});
-    console.log({minuteAndSeconds});
     const newHour = convertHour(hour, middayStat);
     return newHour + minuteAndSeconds;
 }
