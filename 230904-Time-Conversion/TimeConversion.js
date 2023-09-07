@@ -3,6 +3,17 @@
 /////////////////////////////////////////////////
 
 const convertHour = (hour,middayStat) => {
+    if ((middayStat == "AM") && (hour == "12")) {
+        return "00";
+    } else if ((middayStat == "PM") && (hour != "12")) {
+        let numHour = parseInt(hour);
+        numHour += 12;
+        if (numHour >= 10) {
+            return numHour.toString();
+        } else {
+            return "0" + numHour.toString();
+        }
+    }
     return hour;
 }
 
