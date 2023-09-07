@@ -4,6 +4,8 @@
 
 const timeConversion = (s) => {
     console.log({s});
+    const middayStat = s.substring(8,10);
+    console.log({middayStat});
 }
 
 console.log("///////////////////////////////////////");
