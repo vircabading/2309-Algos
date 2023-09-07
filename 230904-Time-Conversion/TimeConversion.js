@@ -4,8 +4,13 @@
 
 const timeConversion = (s) => {
     console.log({s});
-    const middayStat = s.substring(8,10);
+
+    // Parse the parts of the time
+    const middayStat = s.substring(8,10);       // Find out if time is AM or PM?
+    const hour = s.substring(0,2);
     console.log({middayStat});
+    console.log({hour});
+
 }
 
 console.log("///////////////////////////////////////");
